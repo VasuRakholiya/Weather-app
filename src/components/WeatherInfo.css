@@ -46,7 +46,7 @@
   text-transform: capitalize;
 }
 
-/* Weather details */
+
 .weather-details {
   background: rgba(255, 255, 255, 0.8);
   padding: 8px 10px;
@@ -57,7 +57,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* Weather details values */
+
 .weather-details span {
   font-weight: bold;
   color: #111;
@@ -89,7 +89,7 @@
 
 
 .weather-summary {
-  margin-top: 12px;        /* Space below the slider */
+  margin-top: 12px;        
   padding: 10px;
   background: rgba(255, 255, 255, 0.85);
   border-radius: 10px;
@@ -98,7 +98,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Bullet points styling */
+
 .weather-summary ul {
   padding-left: 18px;
   margin: 0;
