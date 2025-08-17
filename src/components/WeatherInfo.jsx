@@ -22,17 +22,16 @@ const WeatherInfo = ({ weatherData, forecastType, selectedIndex, setSelectedInde
     );
   }
 
-  // Determine the forecast array based on forecastType
   const forecastArray = weatherData?.forecast?.forecastday?.[0]?.hour || [];
   const forecast =
     forecastType === "hourly"
       ? forecastArray[selectedIndex] || forecastArray[0]
       : weatherData.current;
 
-  // Generate summary string
+  
   const summaryString = generateWeatherSummary(weatherData);
 
-  // Split summary into lines by periods
+
   const summaryLines = summaryString.split(". ").filter(line => line.trim() !== "");
 
   return (
@@ -51,7 +50,7 @@ const WeatherInfo = ({ weatherData, forecastType, selectedIndex, setSelectedInde
         <p>Loading forecast...</p>
       )}
 
-      {/* Show slider only for hourly */}
+      
       {forecastType === "hourly" && forecastArray.length > 1 && (
         <TimeSlider
           max={forecastArray.length - 1}
@@ -60,7 +59,7 @@ const WeatherInfo = ({ weatherData, forecastType, selectedIndex, setSelectedInde
         />
       )}
 
-      {/* Weather summary below slider or info */}
+   
       <div className="weather-summary">
         <h4>Weather Summary</h4>
         {summaryLines.map((line, index) => (
