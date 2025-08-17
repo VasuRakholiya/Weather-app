@@ -13,7 +13,7 @@ const MapClickHandler = ({ onMapClick }) => {
   return null;
 };
 
-const MapContainer = ({ forecastType }) => { // <-- receive as prop
+const MapContainer = ({ forecastType }) => { 
   const [latLon, setLatLon] = useState(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -35,10 +35,10 @@ const MapContainer = ({ forecastType }) => { // <-- receive as prop
         {latLon && <Marker position={[latLon.lat, latLon.lon]} />}
       </LeafletMap>
 
-      {/* Weather info panel */}
+      
       <WeatherInfo
         weatherData={weatherData}
-        forecastType={forecastType} // use prop here
+        forecastType={forecastType} 
         selectedIndex={selectedIndex}
         setSelectedIndex={setSelectedIndex}
       />
